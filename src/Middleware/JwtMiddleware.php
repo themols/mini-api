@@ -33,7 +33,7 @@ class JwtMiddleware
         $jwt = substr($hdr, 7);
 
         // Carrega configuração corretamente
-        $configPath = __DIR__ . '/../../config/config.php';
+        $configPath = __DIR__ . '/../config/config.php';
         if (!file_exists($configPath)) {
             http_response_code(500);
             echo json_encode(['error' => 'Config file not found']);

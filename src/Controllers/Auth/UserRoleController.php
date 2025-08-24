@@ -1,5 +1,5 @@
 <?php
-namespace App\Controllers;
+namespace App\Controllers\Auth;
 
 use App\Models\UserRole;
 use App\Models\User;

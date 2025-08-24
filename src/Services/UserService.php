@@ -21,8 +21,10 @@ class UserService
         foreach ($rows as $row) {
             $u = new User($this->db);
             $u->load(['id=?', $row->id]);
+          
             $roles = array_map(fn($r) => $r['name'], $u->getRoles());
             $perms = array_map(fn($p) => $p['name'], $u->getPermissions());
+        
             $out[] = [
                 'id' => (int)$u->id,
                 'username' => $u->username,
@@ -39,6 +41,7 @@ class UserService
     {
         $u = new User($this->db);
         $u->load(['id=?', $id]);
+       
         if ($u->dry()) return null;
 
         $roles = array_map(fn($r) => $r['name'], $u->getRoles());
@@ -56,6 +59,7 @@ class UserService
     public function createUser(array $data): int
     {
         $u = new User($this->db);
+      
         $u->username = $data['username'] ?? 'user_'.bin2hex(random_bytes(3));
         $u->email = $data['email'] ?? null;
         $u->setPassword($data['password'] ?? bin2hex(random_bytes(5)));
@@ -91,9 +95,11 @@ class UserService
     {
         $u = new User($this->db);
         $u->load(['id=?', $id]);
+     
         if ($u->dry()) return false;
 
         $u->erase();
+        
         return true;
     }
 }

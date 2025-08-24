@@ -18,10 +18,11 @@ class AuthService
         $this->f3 = $f3;
         $this->db = $f3->get('DB');
 
-        $config = require __DIR__ . '/../../config/config.php';
+        $config = require __DIR__ . '/../config/config.php';
+      
         $this->jwtSecret = $config['jwt']['secret'];
         $this->jwtExp = $config['jwt']['exp'] ?? 3600;
-        $this->refreshExp = $config['jwt']['refresh_exp'] ?? 1209600; // 14 dias
+        $this->refreshExp = $config['jwt']['refresh_exp'] ?? 1209600;
     }
 
     /**
@@ -30,6 +31,7 @@ class AuthService
     public function generateAccessToken(array $payload): string
     {
         $now = time();
+
         $token = [
             'iat' => $now,
             'exp' => $now + $this->jwtExp,
@@ -49,6 +51,7 @@ class AuthService
         $expires = date('Y-m-d H:i:s', time() + $this->refreshExp);
 
         $rt = new RefreshToken($this->db);
+
         $rt->token = $token;
         $rt->user_id = $userId;
         $rt->expires_at = $expires;
@@ -62,7 +65,8 @@ class AuthService
      */
     public function rotateRefreshToken(RefreshToken $rt): string
     {
-        $rt->erase(); // remove antigo
+        $rt->erase();
+
         return $this->generateRefreshToken($rt->user_id);
     }
 
@@ -72,7 +76,9 @@ class AuthService
     public function revokeRefreshToken(string $token): void
     {
         $rt = new RefreshToken($this->db);
+
         $rt->load(['token=?', $token]);
+
         if (!$rt->dry()) {
             $rt->erase();
         }
