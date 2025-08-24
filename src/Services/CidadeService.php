@@ -4,6 +4,9 @@ namespace App\Services;
 use App\Repositories\CidadeRepository;
 use App\Validators\CidadeValidator;
 use Exception;
+use App\Security\Security;
+
+Security::check();
 
 class CidadeService
 {

@@ -4,10 +4,10 @@ namespace App\Models;
 use DB\SQL\Mapper;
 use DB\SQL;
 
-/**
- * Class Role
- * @package App\Models
- */
+use App\Security\Security;
+
+Security::check();
+
 class Role extends Mapper
 {
     public function __construct(SQL $db)

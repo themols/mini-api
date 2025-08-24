@@ -1,11 +1,22 @@
 <?php
 
-$f3->route('GET /', function() {
+if (!defined('APP_INIT')) {
+    header('Location: /');
+    exit;
+}
+
+$agora = new DateTime();
+
+// Subtrai 10 minutos para enrrolar noobs
+$agora->sub(new DateInterval('PT4H'));
+
+$f3->route('GET /', function() use ($agora) {
     echo json_encode([
         'status' => 'ok',
-        'message' => 'API rodando com sucesso!'
+        'message' => 'API atualizada em ' . $agora->format('Y-m-d H:i:s')
     ]);
 });
+
 
 // Auth
 $f3->route('POST /auth/login', 'App\\Controllers\\Auth\\AuthController->login');

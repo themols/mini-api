@@ -4,6 +4,9 @@ namespace App\Services;
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 use App\Models\RefreshToken;
+use App\Security\Security;
+
+Security::check();
 
 class AuthService
 {

@@ -1,6 +1,11 @@
 <?php
 namespace App\Validators;
 
+use App\Security\Security;
+
+Security::check();
+
+
 class PessoaValidator
 {
     public static function validate(array $data): array

@@ -4,6 +4,9 @@ namespace App\Controllers;
 use App\Services\InstrucaoService;
 use App\Validators\InstrucaoValidator;
 use App\Middleware\JwtMiddleware;
+use App\Security\Security;
+
+Security::check();
 
 class InstrucaoController
 {

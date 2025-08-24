@@ -4,6 +4,9 @@ namespace App\Services;
 use App\Repositories\EstadoRepository;
 use App\Validators\EstadoValidator;
 use Exception;
+use App\Security\Security;
+
+Security::check();
 
 class EstadoService
 {

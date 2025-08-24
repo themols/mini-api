@@ -2,6 +2,9 @@
 namespace App\Repositories;
 
 use App\Models\DadosProfissionais;
+use App\Security\Security;
+
+Security::check();
 
 class DadosProfissionaisRepository
 {

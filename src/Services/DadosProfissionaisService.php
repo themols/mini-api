@@ -4,6 +4,9 @@ namespace App\Services;
 use App\Repositories\DadosProfissionaisRepository;
 use App\Validators\DadosProfissionaisValidator;
 use Exception;
+use App\Security\Security;
+
+Security::check();
 
 class DadosProfissionaisService
 {

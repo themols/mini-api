@@ -4,6 +4,9 @@ namespace App\Controllers;
 use App\Services\IntegracaoDesligamentoService;
 use App\Validators\IntegracaoDesligamentoValidator;
 use App\Middleware\JwtMiddleware;
+use App\Security\Security;
+
+Security::check();
 
 class IntegracaoDesligamentoController
 {

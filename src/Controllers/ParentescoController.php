@@ -4,6 +4,9 @@ namespace App\Controllers;
 use App\Services\ParentescoService;
 use App\Validators\ParentescoValidator;
 use App\Middleware\JwtMiddleware;
+use App\Security\Security;
+
+Security::check();
 
 class ParentescoController
 {

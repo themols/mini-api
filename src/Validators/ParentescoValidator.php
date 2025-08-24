@@ -1,6 +1,11 @@
 <?php
 namespace App\Validators;
 
+use App\Security\Security;
+
+Security::check();
+
+
 class ParentescoValidator
 {
     public function validate(array $data): array

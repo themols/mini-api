@@ -3,6 +3,9 @@ namespace App\Repositories;
 
 use App\Models\Pessoa;
 use DB\SQL;
+use App\Security\Security;
+
+Security::check();
 
 class PessoaRepository
 {

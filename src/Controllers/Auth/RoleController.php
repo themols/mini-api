@@ -3,7 +3,9 @@ namespace App\Controllers\Auth;
 
 use App\Models\Role;
 use App\Middleware\JwtMiddleware;
+use App\Security\Security;
 
+Security::check();
 /**
  * Class RoleController
  * CRUD de roles

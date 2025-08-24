@@ -2,6 +2,10 @@
 namespace App\Services;
 
 use App\Repositories\PessoaRepository;
+use App\Security\Security;
+
+Security::check();
+
 
 class PessoaService
 {

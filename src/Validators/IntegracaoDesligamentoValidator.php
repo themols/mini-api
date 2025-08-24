@@ -1,6 +1,11 @@
 <?php
 namespace App\Validators;
 
+use App\Security\Security;
+
+Security::check();
+
+
 class IntegracaoDesligamentoValidator
 {
     public function validate(array $data): array

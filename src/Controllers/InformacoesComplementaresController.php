@@ -1,4 +1,10 @@
 <?php
+namespace App\Controllers;
+
+use App\Security\Security;
+
+Security::check();
+
 class InformacoesComplementaresController {
 
     private $service;

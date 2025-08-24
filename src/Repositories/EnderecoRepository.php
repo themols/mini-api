@@ -2,6 +2,9 @@
 namespace App\Repositories;
 
 use App\Models\Endereco;
+use App\Security\Security;
+
+Security::check();
 
 class EnderecoRepository
 {

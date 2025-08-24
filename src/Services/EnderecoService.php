@@ -4,6 +4,9 @@ namespace App\Services;
 use App\Repositories\EnderecoRepository;
 use App\Validators\EnderecoValidator;
 use Exception;
+use App\Security\Security;
+
+Security::check();
 
 class EnderecoService
 {

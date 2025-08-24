@@ -4,7 +4,9 @@ namespace App\Controllers;
 use App\Services\EnderecoService;
 use App\Validators\EnderecoValidator;
 use App\Middleware\JwtMiddleware;
+use App\Security\Security;
 
+Security::check();
 class EnderecoController
 {
     private $service;

@@ -1,4 +1,11 @@
 <?php
+namespace App\Validators;
+
+use App\Security\Security;
+
+Security::check();
+
+
 class InformacoesComplementaresValidator {
 
     public static function validate($data) {

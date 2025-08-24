@@ -2,6 +2,9 @@
 namespace App\Models;
 
 use DB\SQL\Mapper;
+use App\Security\Security;
+
+Security::check();
 
 class Cidade extends Mapper
 {

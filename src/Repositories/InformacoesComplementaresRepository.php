@@ -1,4 +1,10 @@
 <?php
+namespace App\Repositories;
+
+use App\Security\Security;
+
+Security::check();
+
 class InformacoesComplementaresRepository {
 
     private $db;

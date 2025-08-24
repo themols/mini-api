@@ -4,6 +4,9 @@ namespace App\Middleware;
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 use App\Models\User;
+use App\Security\Security;
+
+Security::check();
 
 /**
  * Class JwtMiddleware

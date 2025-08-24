@@ -3,6 +3,9 @@ namespace App\Repositories;
 
 use App\Models\Estado;
 use DB\SQL;
+use App\Security\Security;
+
+Security::check();
 
 class EstadoRepository
 {

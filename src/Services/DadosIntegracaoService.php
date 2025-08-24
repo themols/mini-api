@@ -4,6 +4,9 @@ namespace App\Services;
 use App\Repositories\DadosIntegracaoRepository;
 use App\Validators\DadosIntegracaoValidator;
 use Exception;
+use App\Security\Security;
+
+Security::check();
 
 class DadosIntegracaoService
 {

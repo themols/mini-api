@@ -1,7 +1,9 @@
 <?php
-/**
- * Basic configuration - replace with environment vars in production
- */
+require_once __DIR__ . '/../security/security.php';
+
+use App\Security\Security;
+
+Security::check();
 
 return [
     'db' => [

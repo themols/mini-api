@@ -4,7 +4,9 @@ namespace App\Controllers;
 use App\Services\CidadeService;
 use App\Validators\CidadeValidator;
 use App\Middleware\JwtMiddleware;
+use App\Security\Security;
 
+Security::check();
 class CidadeController
 {
     private $service;

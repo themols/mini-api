@@ -4,6 +4,10 @@ namespace App\Services;
 use App\Repositories\ParentescoRepository;
 use App\Validators\ParentescoValidator;
 use Exception;
+use App\Security\Security;
+
+Security::check();
+
 
 class ParentescoService
 {

@@ -3,6 +3,9 @@ namespace App\Controllers;
 
 use App\Middleware\JwtMiddleware;
 use App\Services\UserService;
+use App\Security\Security;
+
+Security::check();
 
 class UserController
 {

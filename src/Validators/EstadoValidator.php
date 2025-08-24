@@ -1,6 +1,11 @@
 <?php
 namespace App\Validators;
 
+use App\Security\Security;
+
+Security::check();
+
+
 class EstadoValidator
 {
     public static function validate(array $data): array

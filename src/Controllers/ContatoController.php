@@ -4,7 +4,9 @@ namespace App\Controllers;
 use App\Services\ContatoService;
 use App\Validators\ContatoValidator;
 use App\Middleware\JwtMiddleware;
+use App\Security\Security;
 
+Security::check();
 class ContatoController
 {
     private $service;

@@ -5,7 +5,9 @@ use App\Models\UserRole;
 use App\Models\User;
 use App\Models\Role;
 use App\Middleware\JwtMiddleware;
+use App\Security\Security;
 
+Security::check();
 /**
  * Class UserRoleController
  * Manage user_roles assignments

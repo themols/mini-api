@@ -4,6 +4,9 @@ namespace App\Controllers;
 use App\Services\PessoaService;
 use App\Validators\PessoaValidator;
 use App\Middleware\JwtMiddleware;
+use App\Security\Security;
+
+Security::check();
 
 class PessoaController
 {

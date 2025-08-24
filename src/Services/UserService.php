@@ -2,6 +2,10 @@
 namespace App\Services;
 
 use App\Models\User;
+use App\Security\Security;
+
+Security::check();
+
 
 class UserService
 {

@@ -4,13 +4,10 @@ namespace App\Models;
 use DB\SQL\Mapper;
 use DB\SQL;
 
-/**
- * Class User
- *
- * Representa um usuário do sistema.
- *
- * @package App\Models
- */
+use App\Security\Security;
+
+Security::check();
+
 class User extends Mapper
 {
     /**

@@ -4,7 +4,9 @@ namespace App\Controllers;
 use App\Services\DadosIntegracaoService;
 use App\Validators\DadosIntegracaoValidator;
 use App\Middleware\JwtMiddleware;
+use App\Security\Security;
 
+Security::check();
 class DadosIntegracaoController
 {
     private $service;

@@ -3,7 +3,9 @@ namespace App\Controllers\Auth;
 
 use App\Models\Permission;
 use App\Middleware\JwtMiddleware;
+use App\Security\Security;
 
+Security::check();
 /**
  * Class PermissionController
  * CRUD de permissões

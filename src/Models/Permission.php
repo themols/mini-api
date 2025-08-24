@@ -3,11 +3,10 @@ namespace App\Models;
 
 use DB\SQL\Mapper;
 use DB\SQL;
+use App\Security\Security;
 
-/**
- * Class Permission
- * @package App\Models
- */
+Security::check();
+
 class Permission extends Mapper
 {
     public function __construct(SQL $db)

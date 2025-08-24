@@ -2,6 +2,9 @@
 namespace App\Repositories;
 
 use App\Models\IntegracaoDesligamento;
+use App\Security\Security;
+
+Security::check();
 
 class IntegracaoDesligamentoRepository
 {

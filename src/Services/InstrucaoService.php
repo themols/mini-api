@@ -4,6 +4,9 @@ namespace App\Services;
 use App\Repositories\InstrucaoRepository;
 use App\Validators\InstrucaoValidator;
 use Exception;
+use App\Security\Security;
+
+Security::check();
 
 class InstrucaoService
 {

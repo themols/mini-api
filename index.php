@@ -1,5 +1,8 @@
 <?php
+define('APP_INIT', true);
+
 require_once __DIR__ . '/vendor/autoload.php';
+
 
 $f3 = \Base::instance();
 $f3->set('DEBUG', 3);

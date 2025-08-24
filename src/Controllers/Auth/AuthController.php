@@ -4,7 +4,9 @@ namespace App\Controllers\Auth;
 use App\Services\AuthService;
 use App\Models\User;
 use App\Models\RefreshToken;
+use App\Security\Security;
 
+Security::check();
 /**
  * Class AuthController
  *

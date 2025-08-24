@@ -4,6 +4,10 @@ namespace App\Services;
 use App\Repositories\IntegracaoDesligamentoRepository;
 use App\Validators\IntegracaoDesligamentoValidator;
 use Exception;
+use App\Security\Security;
+
+Security::check();
+
 
 class IntegracaoDesligamentoService
 {

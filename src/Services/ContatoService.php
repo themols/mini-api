@@ -4,6 +4,9 @@ namespace App\Services;
 use App\Repositories\ContatoRepository;
 use App\Validators\ContatoValidator;
 use Exception;
+use App\Security\Security;
+
+Security::check();
 
 class ContatoService
 {

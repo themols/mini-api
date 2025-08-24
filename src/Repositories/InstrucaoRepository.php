@@ -2,6 +2,9 @@
 namespace App\Repositories;
 
 use App\Models\Instrucao;
+use App\Security\Security;
+
+Security::check();
 
 class InstrucaoRepository
 {

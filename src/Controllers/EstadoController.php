@@ -4,7 +4,9 @@ namespace App\Controllers;
 use App\Services\EstadoService;
 use App\Validators\EstadoValidator;
 use App\Middleware\JwtMiddleware;
+use App\Security\Security;
 
+Security::check();
 class EstadoController
 {
     private $service;

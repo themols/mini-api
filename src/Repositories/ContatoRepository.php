@@ -2,6 +2,9 @@
 namespace App\Repositories;
 
 use App\Models\Contato;
+use App\Security\Security;
+
+Security::check();
 
 class ContatoRepository
 {

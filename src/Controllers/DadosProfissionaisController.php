@@ -4,7 +4,9 @@ namespace App\Controllers;
 use App\Services\DadosProfissionaisService;
 use App\Validators\DadosProfissionaisValidator;
 use App\Middleware\JwtMiddleware;
+use App\Security\Security;
 
+Security::check();
 class DadosProfissionaisController
 {
     private $service;
