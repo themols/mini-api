@@ -90,7 +90,7 @@ $admin->load(['email=?', 'contato@ems.dev']);
 if ($admin->dry()) {
     $admin->username = 'Administrador';
     $admin->email = 'contato@ems.dev';
-    $admin->password = password_hash('admin2025ems', PASSWORD_BCRYPT);
+    $admin->password = password_hash('admin', PASSWORD_BCRYPT);
     $admin->save();
     echo "Usuário 'administrador' criado.\n";
 }
